@@ -1,0 +1,23 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.3",nodesep="0.35",ranksep="0.4"];
+node [shape=box,style="rounded,filled",fillcolor="#eef4f8",color="#274c65",fontname="DejaVu Sans",fontsize=12,margin="0.18,0.12"];
+edge [color="#526c7e",arrowsize=0.7];
+raw [label="LCL CSVs or labelled
+synthetic demonstration"];
+clean [label="Validate & audit
+Missingness / duplicates / time"];
+split [label="Chronological split
+Train → validation → test"];
+fit [label="Train-only behavioural scores
+Household × context-slot matrix"];
+tune [label="Validation model selection
+Then refit on train + validation"];
+rank [label="Offline test ranking
+Observed behaviour proxy"];
+sim [label="Constrained flexible-task
+counterfactual simulation"];
+report [label="Metrics & uncertainty
+Separate empirical / simulated claims"];
+raw -> clean -> split -> fit -> tune; tune -> rank; tune -> sim;
+rank -> report; sim -> report;
+}

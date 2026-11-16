@@ -1,0 +1,43 @@
+seed,model,params,validation_ndcg
+11,Popularity,{},0.9774997481090488
+11,PooledPopularity,{},0.9859645918195225
+11,UserKNN,"{""k"": 10}",1.0
+11,UserKNN,"{""k"": 20}",1.0
+11,ItemKNN,"{""k"": 10}",1.0
+11,ItemKNN,"{""k"": 20}",0.9842276027111637
+11,SVD,"{""n_factors"": 8, ""n_epochs"": 30}",0.9753088476286674
+11,SVD,"{""n_factors"": 16, ""n_epochs"": 30}",0.9806367197240949
+11,NMF,"{""n_factors"": 8, ""n_epochs"": 30}",1.0
+11,NMF,"{""n_factors"": 16, ""n_epochs"": 30}",1.0
+11,PooledImplicitALS,"{""factors"": 8, ""regularization"": 0.1, ""preference_threshold"": 0.5}",0.9859871786695539
+11,PooledImplicitALS,"{""factors"": 12, ""regularization"": 0.5, ""preference_threshold"": 0.5}",0.9965486086333141
+11,ImplicitALS,"{""factors"": 8, ""regularization"": 0.1, ""preference_threshold"": 0.5}",0.9862269088684308
+11,ImplicitALS,"{""factors"": 12, ""regularization"": 0.5, ""preference_threshold"": 0.5}",0.9870826289097445
+22,Popularity,{},0.9774997481090488
+22,PooledPopularity,{},0.9859645918195225
+22,UserKNN,"{""k"": 10}",1.0
+22,UserKNN,"{""k"": 20}",1.0
+22,ItemKNN,"{""k"": 10}",1.0
+22,ItemKNN,"{""k"": 20}",0.9842276027111637
+22,SVD,"{""n_factors"": 8, ""n_epochs"": 30}",0.9768061065381493
+22,SVD,"{""n_factors"": 16, ""n_epochs"": 30}",0.9785205087964765
+22,NMF,"{""n_factors"": 8, ""n_epochs"": 30}",1.0
+22,NMF,"{""n_factors"": 16, ""n_epochs"": 30}",1.0
+22,PooledImplicitALS,"{""factors"": 8, ""regularization"": 0.1, ""preference_threshold"": 0.5}",0.9883431197960492
+22,PooledImplicitALS,"{""factors"": 12, ""regularization"": 0.5, ""preference_threshold"": 0.5}",0.9941926675068188
+22,ImplicitALS,"{""factors"": 8, ""regularization"": 0.1, ""preference_threshold"": 0.5}",0.9887223416153088
+22,ImplicitALS,"{""factors"": 12, ""regularization"": 0.5, ""preference_threshold"": 0.5}",0.9873223591086214
+33,Popularity,{},0.9774997481090488
+33,PooledPopularity,{},0.9859645918195225
+33,UserKNN,"{""k"": 10}",1.0
+33,UserKNN,"{""k"": 20}",1.0
+33,ItemKNN,"{""k"": 10}",1.0
+33,ItemKNN,"{""k"": 20}",0.9842276027111637
+33,SVD,"{""n_factors"": 8, ""n_epochs"": 30}",0.9791620476646445
+33,SVD,"{""n_factors"": 16, ""n_epochs"": 30}",0.987225082705827
+33,NMF,"{""n_factors"": 8, ""n_epochs"": 30}",1.0
+33,NMF,"{""n_factors"": 16, ""n_epochs"": 30}",1.0
+33,PooledImplicitALS,"{""factors"": 8, ""regularization"": 0.1, ""preference_threshold"": 0.5}",0.9883431197960492
+33,PooledImplicitALS,"{""factors"": 12, ""regularization"": 0.5, ""preference_threshold"": 0.5}",0.9910782827418041
+33,ImplicitALS,"{""factors"": 8, ""regularization"": 0.1, ""preference_threshold"": 0.5}",0.991457504561064
+33,ImplicitALS,"{""factors"": 12, ""regularization"": 0.5, ""preference_threshold"": 0.5}",0.9873223591086214

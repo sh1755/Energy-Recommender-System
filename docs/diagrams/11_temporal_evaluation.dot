@@ -1,0 +1,19 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.3",nodesep="0.35",ranksep="0.4"];
+node [shape=box,style="rounded,filled",fillcolor="#eef4f8",color="#274c65",fontname="DejaVu Sans",fontsize=12,margin="0.18,0.12"];
+edge [color="#526c7e",arrowsize=0.7];
+split [label="Global time split"];
+train [label="Training period
+Thresholds, scales, model fitting"];
+val [label="Validation period
+Hyperparameter selection"];
+refit [label="Train + validation
+Refit selected configurations"];
+test [label="Untouched future period
+Final ranking evaluation"];
+cold [label="Held-out households
+No personal training history"];
+boot [label="Household-level bootstrap
+Paired comparisons, seed summaries"];
+split -> train -> val -> refit -> test -> boot; split -> cold -> boot;
+}

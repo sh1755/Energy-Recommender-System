@@ -1,0 +1,20 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.3",nodesep="0.35",ranksep="0.4"];
+node [shape=box,style="rounded,filled",fillcolor="#eef4f8",color="#274c65",fontname="DejaVu Sans",fontsize=12,margin="0.18,0.12"];
+edge [color="#526c7e",arrowsize=0.7];
+meter [label="Training meter readings"];
+score [label="Bounded behavioural affinity
+Frequency + magnitude + consistency"];
+matrix [label="Household × time-slot matrix
+Confidence + observed mask"];
+explicit [label="Pseudo-rating objective
+User / item KNN, SVD, NMF"];
+implicit [label="Implicit confidence objective
+Weighted alternating least squares"];
+context [label="Context-aware item splitting
+Weekday / weekend × half-hour"];
+rank [label="Predicted compatibility
+Not inferred appliance flexibility"];
+meter -> score -> matrix; matrix -> explicit; matrix -> implicit;
+implicit -> context; explicit -> rank; context -> rank;
+}

@@ -1,0 +1,25 @@
+seed: 11
+seeds: [11, 22, 33]
+synthetic:
+  households: 36
+  days: 84
+split:
+  train_fraction: 0.6
+  validation_fraction: 0.2
+cold_start_fraction: 0.15
+relevance_threshold: 0.5
+k: 5
+max_households: 100
+chunksize: 250000
+timezone: Europe/London
+weights: [0.4, 0.3, 0.2, 0.1]
+original_slot: 36
+max_shift: 8
+availability: [28, 44]
+task_kwh: 1.0
+carbon_csv: null
+carbon_provenance: null
+carbon_weight: 0.0
+bootstrap_repetitions: 400
+output_dir: results
+constraints_csv: null

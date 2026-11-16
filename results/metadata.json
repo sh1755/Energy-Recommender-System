@@ -1,0 +1,83 @@
+{
+  "data_audit": {
+    "missing_value_rows": 0,
+    "source": "synthetic generator"
+  },
+  "data_source": "synthetic demonstration; no measured outcomes",
+  "tariff": "simulated GBP/kWh: 0.14 before 07:00, 0.40 16:00\u201320:00, otherwise 0.24",
+  "carbon_provenance": null,
+  "config": {
+    "seed": 11,
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "synthetic": {
+      "households": 36,
+      "days": 84
+    },
+    "split": {
+      "train_fraction": 0.6,
+      "validation_fraction": 0.2
+    },
+    "cold_start_fraction": 0.15,
+    "relevance_threshold": 0.5,
+    "k": 5,
+    "max_households": 100,
+    "chunksize": 250000,
+    "timezone": "Europe/London",
+    "weights": [
+      0.4,
+      0.3,
+      0.2,
+      0.1
+    ],
+    "original_slot": 36,
+    "max_shift": 8,
+    "availability": [
+      28,
+      44
+    ],
+    "task_kwh": 1.0,
+    "carbon_csv": null,
+    "carbon_provenance": null,
+    "carbon_weight": 0.0,
+    "bootstrap_repetitions": 400,
+    "output_dir": "results",
+    "constraints_csv": null
+  },
+  "cold_households": [
+    "H0004",
+    "H0017",
+    "H0021",
+    "H0027",
+    "H0032"
+  ],
+  "split_date_ranges": {
+    "train": [
+      "2024-01-08 00:00:00+00:00",
+      "2024-02-27 23:30:00+00:00"
+    ],
+    "validation": [
+      "2024-02-28 00:00:00+00:00",
+      "2024-03-15 23:30:00+00:00"
+    ],
+    "test": [
+      "2024-03-16 00:00:00+00:00",
+      "2024-03-31 23:30:00+00:00"
+    ]
+  },
+  "rows": 145152,
+  "complete_test_household_days": 540,
+  "test_household_days": 612,
+  "python": "3.10.12",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-surprise": "1.1.4",
+    "joblib": "1.4.2"
+  },
+  "methodology": "Validation selects hyperparameters. Refit train+validation; one final test. Household bootstrap averages seeds first; no pseudoreplication. Affinities are aggregate-meter proxies. Energy task is exogenous and added to observed baseline. Signed aggregate peaks include rebound."
+}

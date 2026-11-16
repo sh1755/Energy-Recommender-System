@@ -1,0 +1,21 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.3",nodesep="0.35",ranksep="0.4"];
+node [shape=box,style="rounded,filled",fillcolor="#eef4f8",color="#274c65",fontname="DejaVu Sans",fontsize=12,margin="0.18,0.12"];
+edge [color="#526c7e",arrowsize=0.7];
+data [label="Data layer
+CSV loader + validation"];
+features [label="Behaviour layer
+Profiles + interaction builder"];
+models [label="Model layer
+Surprise baselines + implicit ALS"];
+policy [label="Decision layer
+Tariffs + constraints + weighted ranking"];
+explain [label="Explanation layer
+Scores + assumptions + cost factors"];
+eval [label="Evaluation layer
+Ranking / flexible-task simulation"];
+outputs [label="Outputs
+CSV / joblib / figures / dashboard"];
+data -> features -> models -> policy; policy -> explain; models -> eval;
+policy -> eval; explain -> outputs; eval -> outputs;
+}

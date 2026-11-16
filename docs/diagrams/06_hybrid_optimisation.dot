@@ -1,0 +1,23 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.3",nodesep="0.35",ranksep="0.4"];
+node [shape=box,style="rounded,filled",fillcolor="#eef4f8",color="#274c65",fontname="DejaVu Sans",fontsize=12,margin="0.18,0.12"];
+edge [color="#526c7e",arrowsize=0.7];
+task [label="Assumed flexible task
+Energy + original start"];
+constraints [label="Feasible candidate set
+Availability + maximum shift"];
+preference [label="CF compatibility
+Training-derived prediction"];
+price [label="Exogenous signals
+Simulated tariff + train peak profile"];
+objective [label="Weighted objective
+Preference − cost − peak − inconvenience"];
+choose [label="Rank feasible starts
+Deterministic tie-breaking"];
+explain [label="Factor contributions
+Estimated task savings + caveats"];
+sim [label="Evaluate augmented profiles
+Baseline + task vs shifted task"];
+task -> constraints; constraints -> objective; preference -> objective;
+price -> objective; objective -> choose; choose -> explain; choose -> sim;
+}
